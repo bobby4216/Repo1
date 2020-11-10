@@ -16,6 +16,10 @@
 		</dependency>
 
 	</dependencies>
+	
+<properties>
+  <sonar.buildString> [...] </sonar.buildString>
+</properties>
 
 	<build>
   <pluginManagement>
