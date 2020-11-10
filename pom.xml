@@ -9,13 +9,25 @@
 	<url>http://52.53.192.28:9000</url>
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.2</version>
+                </dependency>
 
 	</dependencies>
+	<profiles>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<sonar.host.url>
+http://52.53.192.28:9000/
+</sonar.host.url>
+</properties>
+</profile>
+</profiles>
 	
 <properties>
   <sonar.buildString> [...] </sonar.buildString>
