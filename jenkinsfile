@@ -17,7 +17,7 @@ stage("build & SonarQube analysis") {
           }
         stage ('Build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install'
+                sh 'mvn -f $WORKSPACE/pom1.xml -Dmaven.test.failure.ignore=true '
             }
             
             
